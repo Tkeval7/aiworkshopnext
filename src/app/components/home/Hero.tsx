@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "../Button";
+// import Button from "../Button";
 import Container from "../Container";
+import { Button } from "@/components/ui/button";
 
 const Hero: React.FC = () => {
   return (
@@ -42,10 +43,17 @@ const Hero: React.FC = () => {
               AI-driven engagement.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button variant="primary" size="lg">
+              <Button
+                className="bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
+                size="lg"
+              >
                 Request a Demo
               </Button>
-              <Button variant="outline" size="lg" className="group">
+              <Button
+                variant="outline"
+                size="lg"
+                className="group cursor-pointer"
+              >
                 <span>Learn More</span>
                 <svg
                   width="20"

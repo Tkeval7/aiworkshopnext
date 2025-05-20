@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button";
+import { Button } from "@/components/ui/button";
 import Container from "../Container";
 
 const FinalCTA: React.FC = () => {
@@ -16,13 +16,16 @@ const FinalCTA: React.FC = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto">
-            <Button variant="primary" size="lg" className=" text-blue-700 ">
+            <Button
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
+            >
               Request a Demo
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-blue-700"
+              className="bg-blue-600 hover:bg-blue-700 text-white hover:text-white cursor-pointer"
             >
               Contact Us
             </Button>

@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button";
+import { Button } from "@/components/ui/button";
 import Container from "../Container";
 
 const PlatformOverview: React.FC = () => {
@@ -83,8 +83,12 @@ const PlatformOverview: React.FC = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-          <Button variant="primary">Explore the Platform</Button>
-          <Button variant="outline">Contact Us</Button>
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white cursor-pointer">
+            Explore the Platform
+          </Button>
+          <Button className="cursor-pointer" variant="outline">
+            Contact Us
+          </Button>
         </div>
       </Container>
     </section>

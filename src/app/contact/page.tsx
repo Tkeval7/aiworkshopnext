@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "../components/Container";
-import Button from "../components/Button";
-
+import { Button } from "@/components/ui/button";
 const Contact: React.FC = () => {
   return (
     <div className="">
@@ -68,7 +67,7 @@ const Contact: React.FC = () => {
                 ></textarea>
               </div>
 
-              <Button variant="primary" className="w-full">
+              <Button className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white hover:text-white">
                 Send Message
               </Button>
             </form>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,17 +59,17 @@ const Header: React.FC = () => {
               </Link>
             ))}
 
-            <button className="bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors font-medium">
+            <button className="bg-transparent border cursor-pointer border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors font-medium">
               Log In
             </button>
-            <button className="bg-blue-600 text-white hover:bg-blue-700 px-5 py-2 rounded-lg transition-colors font-medium">
+            <button className="bg-blue-600 text-white cursor-pointer hover:bg-blue-700 px-5 py-2 rounded-lg transition-colors font-medium">
               Request a Demo
             </button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700"
+            className="md:hidden text-gray-700 cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -77,7 +78,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden pt-4 pb-2">
+          <div className="md:hidden pt-4 pb-2 bg-white">
             <nav className="flex flex-col space-y-4">
               {navItems.map(({ label, href }) => (
                 <Link
@@ -92,12 +93,12 @@ const Header: React.FC = () => {
                 </Link>
               ))}
 
-              <button className="bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors font-medium w-full text-left">
+              <Button className="bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors font-medium w-full text-left">
                 Log In
-              </button>
-              <button className="bg-blue-600 text-white hover:bg-blue-700 px-5 py-2 rounded-lg transition-colors font-medium w-full text-left">
+              </Button>
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-5 py-2 rounded-lg transition-colors font-medium w-full text-left">
                 Request a Demo
-              </button>
+              </Button>
             </nav>
           </div>
         )}
